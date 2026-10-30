@@ -1,0 +1,80 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+
+    <link rel="stylesheet" href="style.css">
+
+
+
+
+    
+
+
+</head>
+<body>
+    <script src="test.js"></script>
+    <button id="order-btn">Order now</button>
+
+
+    <table>
+        <thead>
+            <tr>
+                <th>Placement</th>
+                <th>Console Result</th>
+                <th>Explanation</th>
+            </tr>
+        </thead>
+
+        <tbody>
+            <tr>
+                <td>In the <pre><code>&lt;head&gt;
+                </code></pre> with no attributes
+            
+                </td>
+                <td>Null</td>
+                <td>The browser executes the JAVASCRIPT
+                    before it reached the button element</td>
+            </tr>
+
+            <tr>
+                <td>In the <pre><code>&lt;head&gt;
+                </code></pre> with defer
+                </td>
+                <td><pre><code>&lt;button id="order-btn">order now&lt;/button&gt;
+                </code></pre> </td>
+
+                <td>Defer told the browser not to load the script file yet, 
+                    it went ahead to read other html documents, 
+                    When it came back to run the script file, 
+                    it was easy for it to find the button element because 
+                    the button element has been created.
+                </td>
+            </tr>
+
+            <tr>
+                <td>At the end of the <pre><code>&lt;body&gt;</code></pre>
+                    with no attributes
+                </td>
+                <td>button#order-btn</td>
+                <td>I got the button element because the browser already created the button
+                     element before the script file was loaded</td>
+            </tr>
+
+            <tr>
+                <td>At the very top of the body before the button</td>
+                <td>Null</td>
+                <td>I got null because when the browser downloaded the JAVASCRIPT file,
+                    it didn't find what it was asked to show, ( the buttton element ).
+                    Because the browser haven't read the element in the HTML document yet.
+                </td>
+            </tr>
+
+            
+        </tbody>
+    </table>
+    
+</body>
+</html>

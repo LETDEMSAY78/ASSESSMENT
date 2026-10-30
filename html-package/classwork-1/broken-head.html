@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+
+
+<head>
+<!--The title of a page cannot be "Home" because it tells nothing about the page, 
+a title should pass an information about the page-->
+  <title>Home</title>
+
+
+  <!-- the <script src="app.js"></script> does not have defer which means that 
+   it will download before the page completely builds, 
+   which will make the page to be slow, 
+   another problem is that the sript can't find elements because they haven't been built yet-->
+  <script src="app.js"></script>
+
+
+  <!--user scalable should be yes, 
+  it gives users the freewill to zoom in and out at their disposal -->
+  <meta name="viewport" content="width=device-width, user-scalable=no, maximum-scale=1">
+ 
+
+ <!--<link rel="stylesheet" href="style.css"> this tag is saying that there is a css file 
+ that is used for styling, 
+ the href="style.css" part is the address of the file where the css code is and the rel="stylesheet" 
+ is telling the browser that this file is for styling therefore: <link rel="stylesheet"
+  href="style.css"> is telling the browser:
+  download this css file href="style.css" and use it to style my html. In the case of 
+  <link href="style.css">
+  the browser will just download the css file and do nothing with it-->
+  <link href="style.css">
+  <meta charset="UTF-8">
+
+
+  <!--description cannot be "welcome", 
+  description is meant to give a brief information about the website-->
+  <meta name="description" content="Welcome">
+
+
+  <!--the content of title should not be our site, 
+  the title should give information about the site, 
+  probably the name of the company-->
+  <meta name="og:title" content="Our Site">
+
+
+  <!--The image link must be a full web address starting with https://-->
+  <meta property="og:image" content="images/preview.jpg">
+
+  
+  <!--h1 should not be inside the head, it should be inside the body-->
+  <h1>Welcome to our website</h1>
+</head>
+
+
+
+</head>
+<body>
+    
+</body>
+</html>
